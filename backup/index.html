@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT JobFinder - Знайди роботу своєї мрії</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">💻 IT JobFinder</div>
+        <nav>
+            <ul>
+                <li><a href="#vacancies">Вакансії</a></li>
+                <li><a href="#categories">Категорії</a></li>
+                <li><a href="#profile">Мій профіль</a></li>
+            </ul>
+        </nav>
+        <a href="#profile" class="login-btn">Увійти</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Твоя кар'єра в IT починається тут</h1>
+                <p>Тисячі вакансій від найкращих технологічних компаній.</p>
+                
+                <form class="search-form">
+                    <input type="text" placeholder="Посада (напр. React Developer)">
+                    <input type="text" placeholder="Місто або Remote">
+                    <button type="button">Шукати</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="categories" class="container">
+            <h2>Популярні напрямки</h2>
+            <div class="categories-grid">
+                <div class="category-card">🎨 Frontend</div>
+                <div class="category-card">⚙️ Backend</div>
+                <div class="category-card">🛠 DevOps</div>
+                <div class="category-card">🐞 QA / Testing</div>
+                <div class="category-card">📱 Mobile (iOS/Android)</div>
+                <div class="category-card">📊 Data Science</div>
+            </div>
+        </section>
+
+        <section id="vacancies" class="container">
+            <h2>Гарячі вакансії</h2>
+            <div class="vacancies-grid">
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge remote">Remote</span>
+                        <span class="badge hot">Hot</span>
+                    </div>
+                    <h3>Middle Frontend Developer (React)</h3>
+                    <p class="company"><strong>🏢 TechNova</strong></p>
+                    <p class="reqs">Досвід з React, Redux, TypeScript. Розуміння архітектури сучасних веб-додатків.</p>
+                    <div class="card-footer">
+                        <p class="salary">$2000 - $3000</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge office">Львів, Офіс</span>
+                    </div>
+                    <h3>Junior Python Developer</h3>
+                    <p class="company"><strong>🏢 DataStream</strong></p>
+                    <p class="reqs">Знання Python, Django/FastAPI, базове розуміння алгоритмів та структур даних.</p>
+                    <div class="card-footer">
+                        <p class="salary">$800 - $1200</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge remote">Remote</span>
+                    </div>
+                    <h3>Manual QA Engineer</h3>
+                    <p class="company"><strong>🏢 QualityFirst</strong></p>
+                    <p class="reqs">Створення тест-кейсів, баг-репортів (Jira). Розуміння SDLC.</p>
+                    <div class="card-footer">
+                        <p class="salary">$700 - $1000</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge office">Київ, Гібрид</span>
+                        <span class="badge hot">Hot</span>
+                    </div>
+                    <h3>DevOps Engineer</h3>
+                    <p class="company"><strong>🏢 CloudPro</strong></p>
+                    <p class="reqs">AWS, Docker, Kubernetes, Terraform, CI/CD pipelines (GitLab/Jenkins).</p>
+                    <div class="card-footer">
+                        <p class="salary">$3500 - $5000</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge remote">Remote</span>
+                        <span class="badge hot">Hot</span>
+                    </div>
+                    <h3>Senior Node.js Developer</h3>
+                    <p class="company"><strong>🏢 BackendMasters</strong></p>
+                    <p class="reqs">Глибокі знання Node.js, NestJS, PostgreSQL. Досвід побудови мікросервісної архітектури.</p>
+                    <div class="card-footer">
+                        <p class="salary">$4000 - $6000</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge office">Київ, Офіс</span>
+                    </div>
+                    <h3>UI/UX Designer</h3>
+                    <p class="company"><strong>🏢 CreativeStudio</strong></p>
+                    <p class="reqs">Figma, створення прототипів, дизайн-систем. Наявність портфоліо обов'язкова.</p>
+                    <div class="card-footer">
+                        <p class="salary">$1500 - $2500</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge office">Львів, Гібрид</span>
+                    </div>
+                    <h3>iOS Developer (Swift)</h3>
+                    <p class="company"><strong>🏢 AppInnovators</strong></p>
+                    <p class="reqs">Знання Swift, UIKit/SwiftUI. Досвід публікації додатків в App Store.</p>
+                    <div class="card-footer">
+                        <p class="salary">$2500 - $4000</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+
+                <article class="vacancy-card">
+                    <div class="badges">
+                        <span class="badge remote">Remote</span>
+                    </div>
+                    <h3>Data Analyst</h3>
+                    <p class="company"><strong>🏢 InfoMetrics</strong></p>
+                    <p class="reqs">SQL, Python (Pandas), Tableau/PowerBI. Досвід роботи з великими масивами даних.</p>
+                    <div class="card-footer">
+                        <p class="salary">$1500 - $3000</p>
+                        <button class="apply-btn">Відгукнутися</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="container bg-light">
+            <h2>Як це працює?</h2>
+            <div class="steps-flex">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Створи профіль</h3>
+                    <p>Розкажи про свої навички та досвід роботи в IT.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Знайди вакансію</h3>
+                    <p>Використовуй зручні фільтри для пошуку ідеальної позиції.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Отримай Офер</h3>
+                    <p>Пройди співбесіду та розпочни роботу своєї мрії.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="container">
+            <h2>Мій профіль</h2>
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/150" alt="Аватар" class="avatar">
+                <div class="details">
+                    <div class="profile-header">
+                        <h3>Михайло</h3>
+                        <span class="badge status">Шукаю роботу</span>
+                    </div>
+                    <p class="location">📍 м. Львів</p>
+                    <p class="role"><strong>Бажана посада:</strong> Junior Web Developer</p>
+                    
+                    <div class="progress-container">
+                        <p>Заповненість профілю: 85%</p>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+
+                    <div class="skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="resume-btn">Завантажити CV</button>
+                        <button class="edit-btn">Редагувати профіль</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid container">
+            <div class="footer-col">
+                <h4>IT JobFinder</h4>
+                <p>Найбільша платформа для пошуку роботи в сфері інформаційних технологій.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Кандидатам</h4>
+                <ul>
+                    <li><a href="#">Пошук вакансій</a></li>
+                    <li><a href="#">Компанії</a></li>
+                    <li><a href="#">Зарплатний віджет</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Роботодавцям</h4>
+                <ul>
+                    <li><a href="#">Додати вакансію</a></li>
+                    <li><a href="#">Пошук кандидатів</a></li>
+                    <li><a href="#">Прайс-лист</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p>📍 Львів, пл. Ринок, 1</p>
+                <p>📧 support@it-jobfinder.ua</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IT JobFinder. Всі права захищені.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
