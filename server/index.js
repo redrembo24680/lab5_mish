@@ -20,7 +20,11 @@ app.get('/', (req, res) => {
 
 // Basic Test Route
 app.get('/api/test', (req, res) => {
-    res.json({ message: 'Server is running successfully!', timestamp: new Date() });
+    res.json({ 
+        message: 'Server is running successfully!', 
+        dbConnected: !!db,
+        timestamp: new Date() 
+    });
 });
 
 // Routes

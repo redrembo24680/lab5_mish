@@ -17,7 +17,9 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
 if (!firebaseConfig) {
     let privateKey = process.env.FIREBASE_PRIVATE_KEY;
     if (privateKey) {
-        privateKey = privateKey.replace(/\\n/g, '\n').trim();
+        // Replace literal \n with actual newlines
+        privateKey = privateKey.replace(/\\n/g, '\n');
+        // Remove surrounding quotes if they exist
         if (privateKey.startsWith('"') && privateKey.endsWith('"')) {
             privateKey = privateKey.substring(1, privateKey.length - 1);
         }
@@ -25,18 +27,20 @@ if (!firebaseConfig) {
     firebaseConfig = {
         projectId: process.env.FIREBASE_PROJECT_ID,
         clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-        privateKey: privateKey,
+        privateKey: privateKey?.trim(),
     };
 }
 
 if (!firebaseConfig.projectId || !firebaseConfig.clientEmail || !firebaseConfig.privateKey) {
-    console.warn('⚠️ Firebase Admin environment variables are missing. Firestore will not work!');
+    console.warn('⚠️ Firebase Admin environment variables are missing (projectId, clientEmail, or privateKey). Firestore will not work!');
 } else {
     try {
-        admin.initializeApp({
-            credential: admin.credential.cert(firebaseConfig)
-        });
-        console.log('✅ Firebase Admin initialized');
+        if (!admin.apps.length) {
+            admin.initializeApp({
+                credential: admin.credential.cert(firebaseConfig)
+            });
+            console.log('✅ Firebase Admin initialized');
+        }
     } catch (error) {
         console.error('❌ Firebase Admin init error:', error.message);
     }

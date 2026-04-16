@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { authService } from './services/api';
+import { authService, vacancyService } from './services/api';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Categories from './components/Categories';
